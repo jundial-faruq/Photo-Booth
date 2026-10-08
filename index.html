@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+
+    <title>JUNÉTO Photo Booth</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Space+Grotesk:wght@500;700&family=Caveat:wght@700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- Background -->
+    <div class="bg"></div>
+
+    <div class="grain"></div>
+
+    <!-- Flash kamera -->
+    <div id="flash"></div>
+
+
+    <!-- =========================
+         LANDING PAGE
+    ========================== -->
+
+    <main
+        id="home-screen"
+        class="photo-booth"
+    >
+
+        <section class="start-screen">
+
+
+            <!-- Photo Strip -->
+
+            <div
+                class="strip"
+                aria-hidden="true"
+            >
+
+                <div
+                    class="f"
+                    data-d="'26 10 08"
+                >
+
+                    <div class="fake-face face-one">
+                        😎
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="f"
+                    data-d="'26 10 08"
+                >
+
+                    <div class="fake-face face-two">
+                        🤓
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="f"
+                    data-d="'26 10 08"
+                >
+
+                    <div class="fake-face face-three">
+                        🧢
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="f"
+                    data-d="'26 10 08"
+                >
+
+                    <div class="fake-face face-four">
+                        ✌️
+                    </div>
+
+                </div>
+
+
+                <small>
+                    JUNÉTO ✦
+                </small>
+
+            </div>
+
+
+            <!-- Sticker -->
+
+            <div class="st s1">
+                NEW! ✦
+            </div>
+
+            <div class="st s2">
+                4 FOTO • 1 VIBE
+            </div>
+
+            <div class="st s3">
+                bawa gengmu 👯
+            </div>
+
+            <div class="st s4">
+                💖
+            </div>
+
+            <div class="st s5">
+                FRAME LIMITED
+            </div>
+
+
+            <!-- Camera decoration -->
+
+            <div
+                class="cam"
+                aria-hidden="true"
+            >
+                📸
+            </div>
+
+
+            <!-- =========================
+                 MAIN CARD
+            ========================== -->
+
+            <div class="card">
+
+                <h1
+                    class="logo"
+                    aria-label="Juneto"
+                >
+                    <span>J</span>
+                    <span>U</span>
+                    <span>N</span>
+                    <span>É</span>
+                    <span>T</span>
+                    <span>O</span>
+                </h1>
+
+
+                <div class="sub">
+                    PHOTO BOOTH
+                </div>
+
+
+                <div class="tagline">
+
+                    <h2>
+                        Pose dulu,
+                        <em>mikir belakangan.</em>
+                    </h2>
+
+                    <p class="lead">
+                        Ajak gengmu, pilih frame, gaskeun.
+                        Hasilnya langsung jadi!
+                    </p>
+
+                </div>
+
+
+                <!-- Start -->
+
+                <button
+                    id="start-button"
+                    class="start-button"
+                >
+                    📷 Gas Foto Sekarang →
+                </button>
+
+
+                <!-- Steps -->
+
+                <div class="chips">
+
+                    <b style="--c:var(--lime);--t:-2deg">
+                        <i>01</i>
+                        Pilih frame
+                    </b>
+
+                    <b style="--c:#FF6FB5;--t:1.5deg">
+                        <i>02</i>
+                        Pose bareng
+                    </b>
+
+                    <b style="--c:#FFA24D;--t:-1deg">
+                        <i>03</i>
+                        Cetak &amp; bagikan
+                    </b>
+
+                </div>
+
+            </div>
+
+
+            <!-- Footer ticker -->
+
+            <div class="tick">
+
+                <div id="tk"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         CAMERA SCREEN
+    ========================== -->
+
+    <section
+        id="camera-screen"
+        class="camera-screen"
+    >
+
+        <div class="camera-header">
+
+            <div class="camera-brand">
+                JUNÉTO
+            </div>
+
+            <div class="camera-title">
+                PHOTO BOOTH
+            </div>
+
+        </div>
+
+
+        <div class="camera-wrapper">
+
+            <div class="camera-frame">
+
+                <video
+                    id="camera"
+                    autoplay
+                    playsinline
+                    muted
+                ></video>
+
+
+                <!-- Countdown -->
+
+                <div
+                    id="camera-countdown"
+                    class="camera-countdown hidden"
+                >
+                    3
+                </div>
+
+
+                <!-- Camera status -->
+
+                <div class="camera-status">
+                    <span></span>
+                    CAMERA READY
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="camera-controls">
+
+            <p>
+                Siap? Pose dulu. 😎
+            </p>
+
+            <button
+                id="take-photo"
+                class="take-photo"
+            >
+                <span class="shutter-icon"></span>
+            </button>
+
+            <span>
+                TAP TO CAPTURE
+            </span>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PREVIEW SCREEN
+    ========================== -->
+
+    <section
+        id="preview-screen"
+        class="preview-screen"
+    >
+
+        <div class="preview-header">
+
+            <div class="camera-brand">
+                JUNÉTO
+            </div>
+
+            <div class="camera-title">
+                YOUR MOMENT
+            </div>
+
+        </div>
+        
+
+        <div class="preview-card">
+
+            <div class="preview-label">
+                LOOKS GOOD? 👀
+            </div>
+
+
+            <div class="photo-preview">
+
+                <canvas
+                    id="photo-canvas"
+                ></canvas>
+
+            </div>
+
+
+            <div class="preview-actions">
+
+                <button
+                    id="retake-button"
+                    class="retake-button"
+                >
+                    ↻ Retake
+                </button>
+
+
+                <button
+                    id="continue-button"
+                    class="continue-button"
+                >
+                    Lanjut →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <p class="preview-note">
+            Belum ada filter atau frame — kita tambahkan di tahap berikutnya.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         OLD COUNTDOWN
+         Tidak digunakan lagi,
+         tetapi dipertahankan
+         agar struktur lama aman.
+    ========================== -->
+
+    <div
+        id="cd"
+        class="old-countdown"
+    >
+
+        <div id="num">
+            3
+        </div>
+
+        <p id="msg">
+            Siap-siap, senyum!
+        </p>
+
+        <button id="back">
+            Ulangi
+        </button>
+
+    </div>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
