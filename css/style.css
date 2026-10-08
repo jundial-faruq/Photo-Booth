@@ -1,0 +1,280 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            #f3e8ff 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 80%,
+            #e0f2fe 0%,
+            transparent 35%
+        ),
+        #fafafa;
+
+    color: #18181b;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+.photo-booth {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+/* =========================
+   START SCREEN
+========================= */
+
+.start-screen {
+    width: 100%;
+    max-width: 900px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+
+/* =========================
+   BRAND
+========================= */
+
+.brand {
+    margin-bottom: 30px;
+}
+
+.brand h1 {
+    font-size: clamp(3rem, 8vw, 6rem);
+
+    font-weight: 700;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 8px;
+}
+
+.brand p {
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #71717a;
+}
+
+
+/* =========================
+   TAGLINE
+========================= */
+
+.tagline {
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+}
+
+.tagline h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+
+    line-height: 1.2;
+
+    font-weight: 500;
+
+    margin-bottom: 18px;
+}
+
+.tagline h2 span {
+    font-style: italic;
+}
+
+.tagline p {
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #71717a;
+}
+
+
+/* =========================
+   START BUTTON
+========================= */
+
+.start-button {
+    border: none;
+
+    padding: 16px 34px;
+
+    border-radius: 999px;
+
+    background: #18181b;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.start-button:hover {
+    transform: translateY(-3px);
+
+    background: #27272a;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.start-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   DECORATION
+========================= */
+
+.decoration {
+    position: absolute;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.decoration-one {
+    width: 180px;
+    height: 180px;
+
+    background: #f5d0fe;
+
+    top: -100px;
+    left: -100px;
+
+    opacity: 0.5;
+}
+
+.decoration-two {
+    width: 140px;
+    height: 140px;
+
+    background: #bae6fd;
+
+    bottom: -80px;
+    right: -70px;
+
+    opacity: 0.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-text {
+    margin-top: 60px;
+
+    font-size: 12px;
+
+    color: #a1a1aa;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .photo-booth {
+        padding: 20px;
+    }
+
+    .brand h1 {
+        letter-spacing: -2px;
+    }
+
+    .brand p {
+        font-size: 11px;
+
+        letter-spacing: 3px;
+    }
+
+    .tagline {
+        margin-bottom: 30px;
+    }
+
+    .tagline p {
+        font-size: 14px;
+    }
+
+    .start-button {
+        width: 100%;
+
+        max-width: 280px;
+    }
+
+    .decoration-one {
+        width: 120px;
+        height: 120px;
+
+        top: -60px;
+        left: -60px;
+    }
+
+    .decoration-two {
+        width: 100px;
+        height: 100px;
+
+        bottom: -50px;
+        right: -50px;
+    }
+
+    .footer-text {
+        margin-top: 45px;
+    }
+}
